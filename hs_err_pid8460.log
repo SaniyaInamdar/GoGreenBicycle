@@ -1,0 +1,300 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x77d8ff45, pid=8460, tid=492
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0-b64 mixed mode, sharing)
+# Problematic frame:
+# C  [ntdll.dll+0x3ff45]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x04568ed0):  JavaThread "AWT-EventQueue-0" [_thread_in_native, id=492]
+
+siginfo: ExceptionCode=0xc0000005, writing address 0x00000008
+
+Registers:
+EAX=0x00000008, EBX=0x00000000, ECX=0x00000004, EDX=0x003e2000
+ESP=0x0bddf230, EBP=0x0bddf230, ESI=0x0455d538, EDI=0x00000000
+EIP=0x77d8ff45, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0bddf230)
+0x0bddf230:   0bddf28c 6acd630a 00000004 00000000
+0x0bddf240:   0455d538 6acd62c2 0455d538 6ad27dce
+0x0bddf250:   4c3e005b 0455d538 00000000 0bddf2c8
+0x0bddf260:   00120000 00000000 0bddf2c8 04568ed0
+0x0bddf270:   0455d538 0bddf250 0bddebc4 0bddfa14
+0x0bddf280:   6acdaf00 2d312c7f fffffffe 0bddf2a8
+0x0bddf290:   6ad28fe0 00000003 045f7890 04568f8c
+0x0bddf2a0:   281fdb18 ffffffff 0bddf2c0 6d3711da 
+
+Instructions: (pc=0x77d8ff45)
+0x77d8ff35:   83 e4 f8 8b 4d 08 64 8b 15 18 00 00 00 8d 41 04
+0x77d8ff45:   f0 0f ba 30 00 73 15 8b 42 24 89 41 0c 33 c0 c7 
+
+
+Stack: [0x0bda0000,0x0bde0000),  sp=0x0bddf230,  free space=252k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ntdll.dll+0x3ff45]
+C  [ODBC32.dll+0x3630a]
+C  [ODBC32.dll+0x88fe0]
+C  [JdbcOdbc.dll+0x11da]
+j  sun.jdbc.odbc.JdbcOdbc.allocStmt(J[B)J+0
+j  sun.jdbc.odbc.JdbcOdbc.SQLAllocStmt(J)J+47
+j  sun.jdbc.odbc.JdbcOdbcConnection.createStatement(II)Ljava/sql/Statement;+27
+j  sun.jdbc.odbc.JdbcOdbcConnection.createStatement()Ljava/sql/Statement;+7
+j  stock.actionPerformed(Ljava/awt/event/ActionEvent;)V+171
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Ljava/awt/event/MouseEvent;)V+35
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+J  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+J  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z
+J  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x8168d]
+V  [jvm.dll+0xd4179]
+V  [jvm.dll+0x8155e]
+V  [jvm.dll+0x812bb]
+V  [jvm.dll+0x9bbe9]
+V  [jvm.dll+0xfe77f]
+V  [jvm.dll+0xfe74d]
+C  [msvcrt.dll+0x66cff]
+C  [msvcrt.dll+0x66dc1]
+C  [KERNEL32.DLL+0x1fcc9]
+C  [ntdll.dll+0x67c6e]
+C  [ntdll.dll+0x67c3e]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.jdbc.odbc.JdbcOdbc.allocStmt(J[B)J+0
+j  sun.jdbc.odbc.JdbcOdbc.SQLAllocStmt(J)J+47
+j  sun.jdbc.odbc.JdbcOdbcConnection.createStatement(II)Ljava/sql/Statement;+27
+j  sun.jdbc.odbc.JdbcOdbcConnection.createStatement()Ljava/sql/Statement;+7
+j  stock.actionPerformed(Ljava/awt/event/ActionEvent;)V+171
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Ljava/awt/event/MouseEvent;)V+35
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+J  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+J  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z
+J  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z
+J  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+J  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+J  java.awt.EventDispatchThread.pumpOneEventForHierarchy(ILjava/awt/Component;)Z
+v  ~RuntimeStub::alignment_frame_return Runtime1 stub
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+26
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x04510b18 JavaThread "TimerQueue" daemon [_thread_blocked, id=2540]
+  0x045ce078 JavaThread "DestroyJavaVM" [_thread_blocked, id=7088]
+=>0x04568ed0 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=492]
+  0x04478e88 JavaThread "AWT-Windows" daemon [_thread_in_native, id=5148]
+  0x04476540 JavaThread "AWT-Shutdown" [_thread_blocked, id=11108]
+  0x044763c0 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=9132]
+  0x020614d0 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=10020]
+  0x0205faf8 JavaThread "CompilerThread0" daemon [_thread_blocked, id=2296]
+  0x0205ea90 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2812]
+  0x0205a620 JavaThread "Finalizer" daemon [_thread_blocked, id=11240]
+  0x02059a80 JavaThread "Reference Handler" daemon [_thread_blocked, id=6764]
+
+Other Threads:
+  0x020569b0 VMThread [id=540]
+  0x0205f410 WatcherThread [id=9784]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 576K, used 134K [0x24190000, 0x24230000, 0x24670000)
+  eden space 512K,  17% used [0x24190000, 0x241a6f10, 0x24210000)
+  from space 64K,  67% used [0x24210000, 0x2421acd8, 0x24220000)
+  to   space 64K,   0% used [0x24220000, 0x24220000, 0x24230000)
+ tenured generation   total 6384K, used 4342K [0x24670000, 0x24cac000, 0x28190000)
+   the space 6384K,  68% used [0x24670000, 0x24aad888, 0x24aada00, 0x24cac000)
+ compacting perm gen  total 8192K, used 798K [0x28190000, 0x28990000, 0x2c190000)
+   the space 8192K,   9% used [0x28190000, 0x28257840, 0x28257a00, 0x28990000)
+    ro space 8192K,  66% used [0x2c190000, 0x2c6e7960, 0x2c6e7a00, 0x2c990000)
+    rw space 12288K,  46% used [0x2c990000, 0x2cf243a8, 0x2cf24400, 0x2d590000)
+
+Dynamic libraries:
+0x00400000 - 0x0040c000 	d:\Java\jdk1.5.0\bin\java.exe
+0x77d50000 - 0x77ef4000 	C:\Windows\SYSTEM32\ntdll.dll
+0x77530000 - 0x77620000 	C:\Windows\System32\KERNEL32.DLL
+0x76920000 - 0x76b5a000 	C:\Windows\System32\KERNELBASE.dll
+0x74e10000 - 0x74eaf000 	C:\Windows\SYSTEM32\apphelp.dll
+0x76840000 - 0x768bb000 	C:\Windows\System32\ADVAPI32.dll
+0x76fe0000 - 0x7709f000 	C:\Windows\System32\msvcrt.dll
+0x76c10000 - 0x76c86000 	C:\Windows\System32\sechost.dll
+0x76230000 - 0x762ef000 	C:\Windows\System32\RPCRT4.dll
+0x6d640000 - 0x6d7c5000 	d:\Java\jdk1.5.0\jre\bin\client\jvm.dll
+0x75c10000 - 0x75dac000 	C:\Windows\System32\USER32.dll
+0x76c90000 - 0x76ca8000 	C:\Windows\System32\win32u.dll
+0x75fc0000 - 0x75fe4000 	C:\Windows\System32\GDI32.dll
+0x77c50000 - 0x77d38000 	C:\Windows\System32\gdi32full.dll
+0x76df0000 - 0x76e6b000 	C:\Windows\System32\msvcp_win.dll
+0x760b0000 - 0x761d0000 	C:\Windows\System32\ucrtbase.dll
+0x74c80000 - 0x74ca8000 	C:\Windows\SYSTEM32\WINMM.dll
+0x771d0000 - 0x771f5000 	C:\Windows\System32\IMM32.DLL
+0x6d280000 - 0x6d288000 	d:\Java\jdk1.5.0\jre\bin\hpi.dll
+0x76830000 - 0x76836000 	C:\Windows\System32\PSAPI.DLL
+0x6d610000 - 0x6d61c000 	d:\Java\jdk1.5.0\jre\bin\verify.dll
+0x6d300000 - 0x6d31d000 	d:\Java\jdk1.5.0\jre\bin\java.dll
+0x6d630000 - 0x6d63f000 	d:\Java\jdk1.5.0\jre\bin\zip.dll
+0x6d000000 - 0x6d166000 	D:\Java\jdk1.5.0\jre\bin\awt.dll
+0x770e0000 - 0x771c3000 	C:\Windows\System32\ole32.dll
+0x772b0000 - 0x77530000 	C:\Windows\System32\combase.dll
+0x74670000 - 0x746e6000 	C:\Windows\SYSTEM32\WINSPOOL.DRV
+0x75e80000 - 0x75f07000 	C:\Windows\System32\shcore.dll
+0x73f00000 - 0x74153000 	C:\Windows\SYSTEM32\AcGenral.DLL
+0x75db0000 - 0x75df5000 	C:\Windows\System32\SHLWAPI.dll
+0x76b70000 - 0x76c06000 	C:\Windows\System32\OLEAUT32.dll
+0x77690000 - 0x77c47000 	C:\Windows\System32\SHELL32.dll
+0x74520000 - 0x74594000 	C:\Windows\SYSTEM32\UxTheme.dll
+0x74be0000 - 0x74bf5000 	C:\Windows\SYSTEM32\samcli.dll
+0x74710000 - 0x74718000 	C:\Windows\SYSTEM32\VERSION.dll
+0x74c00000 - 0x74c25000 	C:\Windows\SYSTEM32\USERENV.dll
+0x74c50000 - 0x74c76000 	C:\Windows\SYSTEM32\dwmapi.dll
+0x75120000 - 0x752c9000 	C:\Windows\SYSTEM32\urlmon.dll
+0x74de0000 - 0x74e01000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x74eb0000 - 0x750e6000 	C:\Windows\SYSTEM32\iertutil.dll
+0x74b70000 - 0x74b89000 	C:\Windows\SYSTEM32\MPR.dll
+0x75100000 - 0x7511e000 	C:\Windows\SYSTEM32\srvcli.dll
+0x750f0000 - 0x750fb000 	C:\Windows\SYSTEM32\netutils.dll
+0x74bc0000 - 0x74bd9000 	C:\Windows\SYSTEM32\MSACM32.dll
+0x74500000 - 0x7451d000 	C:\Windows\SYSTEM32\winmmbase.dll
+0x749d0000 - 0x74ab9000 	C:\Windows\SYSTEM32\ddraw.dll
+0x753e0000 - 0x753ef000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x745a0000 - 0x74662000 	C:\Windows\SYSTEM32\dxgi.dll
+0x74c30000 - 0x74c37000 	C:\Windows\SYSTEM32\DCIMAN32.dll
+0x713e0000 - 0x7151c000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_4de65d949492707a\igdumdim32.dll
+0x6d8d0000 - 0x713dc000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_4de65d949492707a\igd9dxva32.dll
+0x763f0000 - 0x76828000 	C:\Windows\System32\SETUPAPI.dll
+0x770a0000 - 0x770db000 	C:\Windows\System32\cfgmgr32.dll
+0x75bf0000 - 0x75c09000 	C:\Windows\System32\bcrypt.dll
+0x04b70000 - 0x04dd5000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_4de65d949492707a\igdgmm32.dll
+0x04800000 - 0x0481e000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_4de65d949492707a\igdinfo32.dll
+0x08de0000 - 0x0b4ea000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_4de65d949492707a\igc32.dll
+0x6af00000 - 0x6af2c000 	C:\Windows\SYSTEM32\dxcore.dll
+0x6ae90000 - 0x6aef3000 	C:\Windows\SYSTEM32\D3DIM700.DLL
+0x6d240000 - 0x6d27d000 	D:\Java\jdk1.5.0\jre\bin\fontmanager.dll
+0x76d10000 - 0x76de4000 	C:\Windows\System32\MSCTF.dll
+0x768c0000 - 0x7691f000 	C:\Windows\System32\bcryptPrimitives.dll
+0x72660000 - 0x7271a000 	C:\Windows\SYSTEM32\textinputframework.dll
+0x723e0000 - 0x7265f000 	C:\Windows\System32\CoreUIComponents.dll
+0x75a60000 - 0x75a89000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x72340000 - 0x723db000 	C:\Windows\System32\CoreMessaging.dll
+0x72260000 - 0x7233c000 	C:\Windows\SYSTEM32\wintypes.dll
+0x77620000 - 0x77683000 	C:\Windows\System32\WS2_32.dll
+0x6d4c0000 - 0x6d4d3000 	D:\Java\jdk1.5.0\jre\bin\net.dll
+0x6ae30000 - 0x6ae82000 	C:\Windows\system32\mswsock.dll
+0x6d4e0000 - 0x6d4e9000 	D:\Java\jdk1.5.0\jre\bin\nio.dll
+0x75e00000 - 0x75e7e000 	C:\Windows\System32\clbcatq.dll
+0x71ce0000 - 0x71d11000 	C:\Windows\system32\dataexchange.dll
+0x71b00000 - 0x71ce0000 	C:\Windows\system32\d3d11.dll
+0x71990000 - 0x71af4000 	C:\Windows\system32\dcomp.dll
+0x717f0000 - 0x71984000 	C:\Windows\system32\twinapi.appcore.dll
+0x6d3c0000 - 0x6d3df000 	D:\Java\jdk1.5.0\jre\bin\jpeg.dll
+0x6d370000 - 0x6d37d000 	D:\Java\jdk1.5.0\jre\bin\JdbcOdbc.dll
+0x6aca0000 - 0x6ad41000 	C:\Windows\SYSTEM32\ODBC32.dll
+0x762f0000 - 0x763ef000 	C:\Windows\System32\CRYPT32.dll
+0x6ac90000 - 0x6ac98000 	C:\Windows\SYSTEM32\DPAPI.DLL
+0x6ac20000 - 0x6ac35000 	C:\Windows\SYSTEM32\VCRUNTIME140.dll
+0x6ac10000 - 0x6ac1a000 	C:\Windows\SYSTEM32\CRYPTBASE.DLL
+0x6aa30000 - 0x6ac05000 	C:\Program Files (x86)\Common Files\Microsoft Shared\Office16\mso20win32client.dll
+0x6a9c0000 - 0x6aa2d000 	C:\Windows\SYSTEM32\MSVCP140.dll
+0x6a6b0000 - 0x6a9b2000 	C:\Program Files (x86)\Common Files\Microsoft Shared\Office16\mso30win32client.dll
+0x69f90000 - 0x6a6a5000 	C:\Program Files (x86)\Common Files\Microsoft Shared\Office16\mso40uiwin32client.dll
+0x69e20000 - 0x69f87000 	C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.19041.3570_none_d95353f5e10286ee\gdiplus.dll
+0x69880000 - 0x69e18000 	C:\Program Files (x86)\Common Files\Microsoft Shared\Office16\mso99Lwin32client.dll
+0x74bb0000 - 0x74bb6000 	C:\Windows\SYSTEM32\MSIMG32.dll
+0x69860000 - 0x6987f000 	C:\Windows\SYSTEM32\SLC.dll
+0x69840000 - 0x6985c000 	C:\Windows\SYSTEM32\sppc.dll
+0x68a80000 - 0x69832000 	C:\Program Files (x86)\Common Files\Microsoft Shared\Office16\mso.dll
+0x74730000 - 0x749c9000 	C:\Windows\SYSTEM32\msi.dll
+0x73bb0000 - 0x73dc0000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3570_none_a868611086700d20\Comctl32.dll
+0x74360000 - 0x74385000 	C:\Windows\SYSTEM32\srpapi.dll
+0x688b0000 - 0x68a60000 	C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE16\ACECORE.DLL
+0x68390000 - 0x688a5000 	C:\Windows\SYSTEM32\d2d1.dll
+0x73a90000 - 0x73a9f000 	C:\Windows\SYSTEM32\WTSAPI32.dll
+0x71520000 - 0x71567000 	C:\Windows\SYSTEM32\WINSTA.dll
+0x68180000 - 0x6838c000 	C:\Windows\SYSTEM32\DWrite.dll
+0x68150000 - 0x68179000 	C:\Windows\SYSTEM32\d3d10_1.dll
+0x68140000 - 0x6814c000 	C:\Windows\SYSTEM32\d3d10_1core.dll
+0x744e0000 - 0x744f9000 	C:\Windows\SYSTEM32\davclnt.dll
+0x74720000 - 0x7472a000 	C:\Windows\SYSTEM32\DAVHLPR.dll
+0x75440000 - 0x75a53000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x75410000 - 0x75434000 	C:\Windows\SYSTEM32\Wldp.dll
+0x752f0000 - 0x7530c000 	C:\Windows\SYSTEM32\profapi.dll
+0x66b90000 - 0x66c63000 	C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE16\1033\ACEWSTR.DLL
+0x66af0000 - 0x66b8e000 	C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE16\ACEES.DLL
+0x66ae0000 - 0x66ae6000 	C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE16\VBAJET32.DLL
+0x66a20000 - 0x66adf000 	C:\Windows\SYSTEM32\MSVCR100.dll
+0x669c0000 - 0x66a14000 	C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE16\expsrv.dll
+0x6ac40000 - 0x6ac87000 	C:\PROGRA~2\COMMON~1\MICROS~1\OFFICE16\ACEODBC.DLL
+0x75f10000 - 0x75fbf000 	C:\Windows\System32\COMDLG32.dll
+0x74cb0000 - 0x74d3d000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.3570_none_c0ddcb7e38bd1f11\COMCTL32.dll
+0x68a70000 - 0x68a7e000 	C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE16\1033\ACEODBCI.DLL
+0x68a60000 - 0x68a6c000 	C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE16\ACEERR.DLL
+0x67af0000 - 0x680b2000 	C:\Windows\SYSTEM32\D3D10Warp.dll
+0x66cd0000 - 0x67ae7000 	C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_4de65d949492707a\igd10iumd32.dll
+0x66ca0000 - 0x66cc1000 	C:\Windows\SYSTEM32\ncrypt.dll
+0x66c70000 - 0x66c98000 	C:\Windows\SYSTEM32\NTASN1.dll
+0x66980000 - 0x669b3000 	C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE16\1033\ACEINTL.DLL
+0x66940000 - 0x66972000 	C:\Windows\System32\netprofm.dll
+0x66930000 - 0x6693a000 	C:\Windows\System32\npmproxy.dll
+0x66840000 - 0x6692f000 	C:\Windows\SYSTEM32\webservices.dll
+0x66830000 - 0x6683a000 	C:\Windows\SYSTEM32\Secur32.dll
+0x76cb0000 - 0x76cb7000 	C:\Windows\System32\Normaliz.dll
+
+VM Arguments:
+java_command: loginscreen
+
+Environment Variables:
+PATH=d:\Java\jdk1.5.0\bin
+USERNAME=Admin
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 4 family 6, cmov, cx8, fxsr, mmx, sse, sse2, ht
+
+Memory: 4k page, physical 2097151k(2097151k free), swap 4194303k(3438892k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0-b64) for windows-x86, built on Sep 15 2004 03:00:31 by "java_re" with MS VC++ 6.0
+
