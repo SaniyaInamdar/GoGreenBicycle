@@ -1,4 +1,5 @@
 # GoGreenBicycle
+
 # 🚴‍♀️ Go Green Bicycle – Bicycle Rental Management System
 
 The **Go Green Bicycle** project is a Java & MySQL-based desktop application designed to streamline the bicycle rental process while promoting eco-friendly initiatives like tree plantation. It enables employees to manage bicycle bookings, customer records, supplier data, and environmental fund allocation efficiently and securely.
@@ -6,6 +7,7 @@ The **Go Green Bicycle** project is a Java & MySQL-based desktop application des
 ## 🌿 Project Objective
 
 To provide a simple, reliable, and secure software solution that enables:
+
 - Smooth bicycle rentals and returns
 - Management of customer, employee, and supplier records
 - Allocation of rental income to green activities like plantation drives
@@ -22,11 +24,10 @@ To provide a simple, reliable, and secure software solution that enables:
 ## 🛠️ Tech Stack
 
 Frontend: Java Swing (GUI)  
-Backend: Java 
+Backend: Java
 Database: MySQL  
 IDE/Tools: Notepad++, Command Line  
 Testing: Black Box, White Box Testing
-
 
 ## 🧪 Testing Summary
 
@@ -51,8 +52,6 @@ Testing: Black Box, White Box Testing
 
 <img width="1003" height="1070" alt="image" src="https://github.com/user-attachments/assets/f84b1b7e-1ef0-4f2c-94e7-d56cf5ca4007" />
 
-<img width="1003" height="535" alt="image" src="https://github.com/user-attachments/assets/203a8fbb-f520-4b86-9137-645682dfcfcc" />
-
 <img width="1003" height="532" alt="image" src="https://github.com/user-attachments/assets/ea2d0c71-3ac0-4ae6-b6c0-77532f467f99" />
 
 <img width="1003" height="535" alt="image" src="https://github.com/user-attachments/assets/b89ba273-fe35-43a3-88c4-3f20f62852d0" />
@@ -63,7 +62,6 @@ Testing: Black Box, White Box Testing
 
 <img width="1003" height="542" alt="image" src="https://github.com/user-attachments/assets/e3a4c871-a05a-4504-b115-8e811629f1e5" />
 
-
 ## 👥 Project Team
 
 - Saniya Asif Inamdar – Backend, Logic, Documentation
@@ -71,8 +69,6 @@ Testing: Black Box, White Box Testing
 
 Guided By: Prof. Suvarna Mhasekar
 
-
 # Project Screen Shots
-
 
 > 🚴 "One ride = One tree. Build code that gives back to nature!" 🌍
